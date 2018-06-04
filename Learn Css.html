@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            p{
+                font-size: 17.5px
+                    
+            }
+            nav{
+                width: 150px;
+                height: 800px;
+            }
+            iframe{
+                width: 270px;
+            }
+            .col-sm-3, .col-sm-2, .col-sm-1 , .col-sm-4{
+                background-color: lightgrey;
+                width: 300px;
+                padding: 25px;
+                margin: 12px;
+                width: 10px;
+                height: 470px;
+                color: #1a1aff;
+                border: 2px solid #1a1aff;
+                border-radius: 25px;
+                box-shadow: 2px 3px #737373;
+                }
+                h3{
+                    text-decoration: underline;
+                }
+                .jumbotron{
+                    border: 2px solid ;
+                    box-shadow: 2px 3px #737373;
+                }
+                .button{
+                    display: inline-block;
+                    border-radius: 4px;
+                    background-color: #1a1aff;
+                    text-align: center;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    border: 2px solid #1a1aff;
+                    box-shadow: 2px 3px #737373;
+                    height: 10%;
+                    width: 105%;
+                }
+                .button span{
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    transition: 0.5s;
+                }
+                .button span:after{
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+                .button:hover span{
+                    padding-right: 25px;
+                }
+                .button:hover span:after{
+                    opacity: 1;
+                    right: 0;
+                }
+                iframe{
+                    border: 2px solid #1a1aff;
+                }
+                .jumbotron{
+                    border: 2px solid #1a1aff;
+                    box-shadow: 2px 3px #737373;
+                }
+                .button{
+                    display: inline-block;
+                    border-radius: 4px;
+                    background-color: #1a1aff;
+                    text-align: center;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    border: 2px solid #1a1aff;
+                    box-shadow: 2px 3px #737373;
+                    height: 10%;
+                    width: 105%;
+                }
+                .button span{
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    transition: 0.5s;
+                }
+                .button span:after{
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+                .button:hover span{
+                    padding-right: 25px;
+                }
+                .button:hover span:after{
+                    opacity: 1;
+                    right: 0;
+                }
+                iframe{
+                    border: 2px solid #1a1aff;
+                    border-radius: 25px;
+                }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <center><div class="container">
+            <div class="jumbotron">
+                <h1>CSS Learning Center</h1>
+                <p>Learn how to code with CSS</p> 
+            </div>
+            <div class="row">
+                <div  class="col-sm-2">
+                    <strong><h3> Background</h3></strong>
+                    <p> The current CTO of Opera Software, Haakon Wium Lie, also wears another hat--that of one of the founders of the web page formatting standard known as cascading style sheets (CSS). Lie took the time to answer some questions about CSS.</p>
+                    <a  style="color: black;"class = "link" href="https://www.htmlgoodies.com/daily_news/haakon-wium-lie-founder-of-css-answers-some-questions.html">Learn More</a>
+                </div>
+                <div class="col-sm-3" >
+                    <h3 >What does it do</h3>
+                    <p >The Importance of CSS in Web Development. Cascading Style Sheets, commonly known as CSS, is an integral part of the modern web development process. It is a highly effective HTML tool that provides easy control over layout and presentation of website pages by separating content from design.</p>
+                    <center><a style="color: black;"class = "link" href="http://www.plasmacomp.com/blogs/importance-of-css-in-web-development">Learn More</a></center>
+                </div>
+                <div class="col-sm-4">
+                    <h3 >Learn to CSS</h3>
+                    <p >Click below to watch a video about simple CSS</p><br>
+                    <center><iframe src="https://www.youtube.com/embed/H3KESBQTD8k" allowfullscreen="allowfullscreen"></iframe></center>
+                </div>
+                <div class="col-sm-2">
+                    <h3> Try it yourself</h3>
+                    <br>
+                    <strong><button class = "button"><a style="color: white;" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_default"><span>Try it Yourself!</span></a></button></strong>
+                    <br>
+                    <br>
+                    <strong><button class = "button"><a style="color: white;"href="CSS%20quiz.html"><span>Take the Quiz!</span></a></button></strong>
+                </div>
+            </div>
+        </div></center>
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav navbar-nav">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                        <li class="active"><a href="Index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">HTML
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Html%20Learn.html">Learn</a></li>
+                                <li><a href="HTML%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li class"dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CSS
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Learn%20Css.html">Learn</a></li>
+                                <li><a href="CSS%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li class"dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">JavaScript
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Learn%20JavaScript.html">Learn</a></li>
+                                <li><a href="JavaScript%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Final%20quiz.html">Final Quiz</a>
+                            <a href="About.html">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script> 
+        <style>
+            p{
+                color: black;
+            }
+            nav{
+                width: 150px;
+                height: 800px;
+            }
+            img{
+                width: 75px;
+                height: 75px;
+            }
+            .wrapper {
+                text-align: center;
+            }
+            .button {
+                background-color: black;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                -webkit-transition-duration: 0.4s; 
+                transition-duration: 0.4s;
+                cursor: pointer;
+                width: 112%;
+            }
+            .button1 {
+                background-color: white; 
+                color: black; 
+                border: 2px solid black;
+            }
+            .button1:hover {
+                background-color: black;
+                color: white;
+            }
+            h1{
+                text-decoration: underline;
+            }
+            
+        </style>
+    </head>
+    <script type="text/template" id="template">
+    <div class="card">
+        <div class="radio">
+        <h1> {{question}} <img src = "pics/white.png" id = "picture{{id}}" align = "middle"> </h1>
+        <div class= "radio2">
+        <label><p type="radio"><input id = "q" type="radio" value=1 name="question{{id}}"> {{choice1}} </p></label><br><br>
+        <label><p><input id = "q" type="radio" value=2 name="question{{id}}"> {{choice2}} </p></label><br><br>
+        <label>{{#choice3}}<p><input id = "q" type="radio" value=3 name="question{{id}}"> {{choice3}} </p>{{/choice3}}</label><br><br>
+        <label>{{#choice4}}<p><input id = "q" type="radio" value=4 name="question{{id}}"> {{choice4}} </p>{{/choice4}}</label><br><br>
+        </div>
+    </div>
+    </div>
+    </script>
+    <script>
+        var data;
+        function loadJSON(){               
+            $.getJSON("https://coding-6d8fa.firebaseio.com/.json",function(results){
+                data = results;
+                displayData();
+            })
+        }
+        function displayData(){
+            var build = "";
+            var output = document.getElementById("output");
+            var template = document.getElementById("template").innerHTML;
+            for(var key in data.Final){
+                 try{
+                    build += Mustache.render(template,data.Final[key]);
+                 }catch(e){
+                 }
+            }   
+            output.innerHTML = build;
+        }
+        function grade(){
+            var score = 0;
+            var pic;
+            for(var i = 1; i <= 10; i++){
+                pic = document.getElementById("picture" + i)
+                var correctAnswer = data.Final["Q" + i].answer;
+                try{
+                var userAnswer = document.querySelector('input[name= "question' + i + '"]:checked').value
+                }catch(e){
+                    var userAnswer = -1
+                }
+                if(correctAnswer == userAnswer){
+                    pic.src = "pics/check.png"
+                    score += 1
+                }else{
+                    pic.src = "pics/x.png"
+                }
+            }
+        }
+        
+    </script>
+    <body onload="loadJSON()">
+        <div class="container">
+            
+            <div class="jumbotron">
+                <center><h1>Final Quiz</h1></center>
+                
+            </div>
+            
+            <div id="output"></div>
+            <div class="w3-container">
+            <div class="wrapper">
+            <button class="button button1" onclick="grade()">Check Answers</button>
+            </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav navbar-nav">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                        <li class="active"><a href="Index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">HTML
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Html%20Learn.html">Learn</a></li>
+                                <li><a href="HTML%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li class"dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CSS
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Learn%20Css.html">Learn</a></li>
+                                <li><a href="CSS%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li class"dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">JavaScript
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Learn%20JavaScript.html">Learn</a></li>
+                                <li><a href="JavaScript%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Final%20quiz.html">Final Quiz</a>
+                            <a href="About.html">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </ul>
+        </div>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            nav{
+                width: 150px;
+                height: 800px;
+            }
+            .image{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .card-container{
+                cursor: pointer;
+                height: 475px;
+                perspective: 600;
+                position: relative;
+                width: 500;
+            }
+            .card {
+                height: 100%;
+                position: absolute;
+                transform-style: preserve-3d;
+                transition: all 1s ease-in-out;
+                width: 100%;
+            }
+            .card:hover {
+                transform: rotateX(180deg);
+            }
+            .card .side {
+                backface-visibility: hidden;
+                border-radius: 6px;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+                width: 100%;
+                position:absolute;
+                border-radius: 25px;
+                border: 3px solid black;
+                font-weight: bold;
+            }
+            .card .back {
+                background: #eaeaed;
+                color: #0087cc;
+                text-align: center;
+                transform: rotateX(180deg);
+                position:absolute;
+                border-radius: 25px;
+                border: 3px solid black;
+                font-weight: bold;
+            }
+            P{
+                font-size: 18pt;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <center><h1>About the Developers</h1>
+                <p>Brandon Figueroa, SangJoon Jung, Matthew Zeman</p></center>
+            </div>
+
+                <div class="col-md-4">
+                <div class="card-container">
+                <div class="card">
+                <div class="side"><center><h3>Brandon Figueroa</h3><img src="pics/Brandon.jpg" class="image"></div></center>
+                <div class="side back"><br><p>Presently I am in 10th grade in Bayside High School learning computer programming. This course has interested me since I am a huge fan of gaming and web designs. I've learned a lot about the programming languages and how they work with other programming languages.</p></div>
+                </div> 
+                </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card-container">
+                <div class="card">
+                <div class="side"><center><h3>Matthew Zeman</h3><img src="pics/Matthew.jpg" class="image"></div></center>
+                <div class="side back"><br><p>I am presently attending Bayside High School learning Computer Programming. I like to extend my limits and learn more about programming. I've always liked new challenges to face so that I can learn from the experience. Technology has made me curious since day one, so one day I hope to be a great programmer.</p></div> 
+                </div>
+                </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="card-container">
+                <div class="card">
+                <div class="side"><center><h3>SangJoon Jung</h3><img src="pics/Sang.png" class="image"></div></center>
+                <div class="side back"><br><p>I am currently enrolled in Bayside High School as a sophomore learning computer programming in Mr. Castro's class. This class has allowed me to expand my knowledge on the programming languages and what they do. I've been interested in technology ever since I was kid because I found computer related technology facinating.</p></div>
+                </div> 
+                </div>
+                </div>
+
+
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav navbar-nav">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                        <li class="active"><a href="Index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">HTML
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Html%20Learn.html">Learn</a></li>
+                                <li><a href="HTML%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li class"dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CSS
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Learn%20Css.html">Learn</a></li>
+                                <li><a href="CSS%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li class"dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">JavaScript
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Learn%20JavaScript.html">Learn</a></li>
+                                <li><a href="JavaScript%20quiz.html">Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Final%20quiz.html">Final Quiz</a>
+                            <a href="About.html">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </ul>
+        </div>
+    </body>
+</html>
