@@ -5,34 +5,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            p{
-                font-size: 17.5px
-                    
-            }
-            nav{
-                width: 150px;
-                height: 800px;
-            }
-            iframe{
-                width: 270px;
-            }
-            .col-sm-3, .col-sm-2, .col-sm-1 , .col-sm-4{
-                background-color: lightgrey;
-                width: 300px;
-                padding: 25px;
-                margin: 12px;
-                width: 10px;
-                height: 470px;
-                color: #cca300;
-                border: 2px solid #cca300;
-                border-radius: 25px;
-                box-shadow: 2px 3px #737373;
+                p{
+                    font-size: 17.5px;
+                }
+                nav{
+                    width: 150px;
+                    height: 800px;
+                }
+                iframe{
+                    width: 225px;
+                }
+                .panel > .panel-body{
+                    background-color: lightgrey;
+                    color: #cca300;
+                    border: 2px solid #cca300;
+                    border-radius: 0px;
+                    box-shadow: 2px 3px #737373;
                 }
                 h3{
                     text-decoration: underline;
                 }
                 .jumbotron{
-                    border: 2px solid ;
+                    border: 2px solid #cca300;
                     box-shadow: 2px 3px #737373;
                 }
                 .button{
@@ -45,7 +39,7 @@
                     border: 2px solid #cca300;
                     box-shadow: 2px 3px #737373;
                     height: 10%;
-                    width: 105%;
+                    width: 100%;
                 }
                 .button span{
                     cursor: pointer;
@@ -67,50 +61,6 @@
                 .button:hover span:after{
                     opacity: 1;
                     right: 0;
-                }
-                iframe{
-                    border: 2px solid #cca300;
-                }
-                .jumbotron{
-                    border: 2px solid #cca300;
-                    box-shadow: 2px 3px #737373;
-                }
-                .button{
-                    display: inline-block;
-                    border-radius: 4px;
-                    background-color: #cca300;
-                    text-align: center;
-                    transition: all 0.5s;
-                    cursor: pointer;
-                    border: 2px solid #cca300;
-                    box-shadow: 2px 3px #737373;
-                    height: 10%;
-                    width: 105%;
-                }
-                .button span{
-                    cursor: pointer;
-                    display: inline-block;
-                    position: relative;
-                    transition: 0.5s;
-                }
-                .button span:after{
-                    content: '\00bb';
-                    position: absolute;
-                    opacity: 0;
-                    top: 0;
-                    right: -20px;
-                    transition: 0.5s;
-                }
-                .button:hover span{
-                    padding-right: 25px;
-                }
-                .button:hover span:after{
-                    opacity: 1;
-                    right: 0;
-                }
-                iframe{
-                    border: 2px solid #cca300;
-                    border-radius: 25px;
                 }
         </style>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -123,33 +73,48 @@
                 <h1>JavaScript Learning Center</h1>
                 <p>Learn how to code with JavaScript</p> 
             </div>
+
             <div class="row">
-                <div  class="col-sm-2">
-                    <strong><h3> Background</h3></strong>
-                    <p> JavaScript was created by Brendan Eich in 1995 during his time at Netscape Communications. It was inspired by Java, Scheme and Self.
-Netscape, for a time, made the best browser in the world and enjoyed market dominance.</p>
-                    <a  style="color: black;"class = "link" href="https://medium.com/@benastontweet/lesson-1a-the-history-of-javascript-8c1ce3bffb17">Learn More</a>
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                    <div class="panel-body"><strong><h3> Background</h3></strong></div><br>
+                    <div class="panel-body"><p> JavaScript was created by Brendan Eich in 1995 during his time at Netscape Communications. It was inspired by Java, Scheme and Self. Netscape, for a time, made the best browser in the world and enjoyed market dominance</p>
+                    <a style="color: black;"class = "link" href="https://medium.com/@benastontweet/lesson-1a-the-history-of-javascript-8c1ce3bffb17">Learn More</a> 
                 </div>
-                <div class="col-sm-3" >
-                    <h3 >What does it do</h3>
-                    <p >Used in Web pages, JavaScript is a "client-side" programming language. This means JavaScript scripts are read, interpreted and executed in the client, which is your Web browser. By comparison, "server-side" programming languages run on a remote computer, such as a server hosting a website.</p>
+                </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                    <div class="panel-body"><h3>What does it do</h3></div><br>
+                    <div class="panel-body"><p>Used in Web pages, JavaScript is a "client-side" programming language. This means JavaScript scripts are read, interpreted and executed in the client, which is your Web browser. By comparison, "server-side" programming languages run on a remote computer, such as a server hosting a website</p>
                     <center><a style="color: black;"class = "link" href="https://www.techwalla.com/articles/what-does-javascript-do">Learn More</a></center>
                 </div>
-                <div class="col-sm-4">
-                    <h3 >Learn to JavaScript</h3>
-                    <p >Click below to watch a video about simple CSS</p><br>
+                </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                    <div class="panel-body"><h3 >Learn to JavaScript</h3></div><br>
+                    <div class="panel-body"><p>Click below to watch a video about simple JavaScript</p><br>
                     <center><iframe src="https://www.youtube.com/embed/fGdd9qNwQdQ" allowfullscreen="allowfullscreen"></iframe></center>
                 </div>
-                <div class="col-sm-2">
-                    <h3> Try it yourself</h3>
-                    <br>
+                </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                    <div class="panel-body"><h3> Try it yourself</h3></div><br>
+                    <div class="panel-body"><br>
                     <strong><button class = "button"><a style="color: white;" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst"><span>Try it Yourself!</span></a></button></strong>
                     <br>
                     <br>
                     <strong><button class = "button"><a style="color: white;"href="JavaScript%20quiz.html"><span>Take the Quiz!</span></a></button></strong>
                 </div>
+                </div>
+                </div>
             </div>
-        </div></center>
+        </center>
         <div class="container-fluid">
             <div class="navbar-header">
             </div>

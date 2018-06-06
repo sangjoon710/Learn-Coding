@@ -5,27 +5,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            p{
-                font-size: 17.5px;
-            }
-            nav{
-                width: 150px;
-                height: 800px;
-            }
-            iframe{
-                width: 270px;
-            }
-            .col-sm-3, .col-sm-2, .col-sm-1 , .col-sm-4{
-                background-color: lightgrey;
-                width: 300px;
-                padding: 25px;
-                margin: 12px;
-                width: 10px;
-                height: 470px;
-                color: #cc0000;
-                border: 2px solid #cc0000;
-                border-radius: 25px;
-                box-shadow: 2px 3px #737373;
+                p{
+                    font-size: 17.5px;
+                }
+                nav{
+                    width: 150px;
+                    height: 800px;
+                }
+                iframe{
+                    width: 225px;
+                }
+                .panel > .panel-body{
+                    background-color: lightgrey;
+                    color: #cc0000;
+                    border: 2px solid #cc0000;
+                    border-radius: 0px;
+                    box-shadow: 2px 3px #737373;
                 }
                 h3{
                     text-decoration: underline;
@@ -44,7 +39,7 @@
                     border: 2px solid #cc0000;
                     box-shadow: 2px 3px #737373;
                     height: 10%;
-                    width: 105%;
+                    width: 100%;
                 }
                 .button span{
                     cursor: pointer;
@@ -78,32 +73,49 @@
                 <h1>HTML Learning Center</h1>
                 <p>Learn how to code with HTML</p> 
             </div>
+
             <div class="row">
-                <div  class="col-sm-2">
-                    <strong><h3> Background</h3></strong>
-                    <p> 1989: Tim Berners-Lee invents the Web with HTML as its publishing language. The World Wide Web began life in the place where you would least expect it: at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland</p>
-                    <a  style="color: black;"class = "link" href="https://www.w3.org/People/Raggett/book4/ch02.html">Learn More</a>
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                    <div class="panel-body"><strong><h3> Background</h3></strong></div><br>
+                    <div class="panel-body"><p> 1989: Tim Berners-Lee invents the Web with HTML as its publishing language. The World Wide Web began life in the place where you would least expect it: at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland</p>
+                    <a style="color: black;"class = "link" href="https://www.w3.org/People/Raggett/book4/ch02.html">Learn More</a>
                 </div>
-                <div class="col-sm-3" >
-                    <h3 >What does it do</h3>
-                    <p >HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user.</p>
+                </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                    <div class="panel-body"><h3>What does it do</h3></div><br>
+                    <div class="panel-body"><p>HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user</p>
                     <center><a style="color: black;"class = "link" href="https://searchmicroservices.techtarget.com/definition/HTML-Hypertext-Markup-Language">Learn More</a></center>
                 </div>
-                <div class="col-sm-4">
-                    <h3 >Learn to HTML</h3>
-                    <p >Click below to watch a video about simple HTML</p><br>
+                </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                    <div class="panel-body"><h3 >Learn to HTML</h3></div><br>
+                    <div class="panel-body"><p>Click below to watch a video about simple HTML</p><br>
                     <center><iframe src="https://www.youtube.com/embed/-USAeFpVf_A" allowfullscreen="allowfullscreen"></iframe></center>
                 </div>
-                <div class="col-sm-2">
-                    <h3> Try it yourself</h3>
-                    <br>
+                </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                    <div class="panel-body"><h3> Try it yourself</h3></div><br>
+                    <div class="panel-body"><br>
                     <strong><button class = "button"><a style="color: white;" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default"><span>Try it Yourself!</span></a></button></strong>
                     <br>
                     <br>
                     <strong><button class = "button"><a style="color: white;"href="HTML%20quiz.html"><span>Take the Quiz!</span></a></button></strong>
                 </div>
+                </div>
+                </div>
+
             </div>
-        </div></center>
+        </center>
         <div class="container-fluid">
             <div class="navbar-header">
             </div>
